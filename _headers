@@ -1,0 +1,4 @@
+# Netlify custom headers for takura.live
+# Short cache on content.json so weekly updates appear quickly.
+/content.json
+  Cache-Control: public, max-age=60, must-revalidate

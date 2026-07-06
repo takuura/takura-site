@@ -1,0 +1,37 @@
+{
+  "updated_at": "2026-07-06",
+  "latest_mix_url": "https://soundcloud.com/takuura/theradar005",
+  "weekly_playlist_url": "https://soundcloud.com/takuura/sets/the-radar-takuera",
+  "weekly_playlist_label": "THE RADAR · Weekly Radio",
+  "music": [
+    {
+      "label": "Mix · Afro House",
+      "title": "After Pall Mall",
+      "soundcloud_url": "https://soundcloud.com/takuura/after-pall-mall"
+    },
+    {
+      "label": "Mix · Afro House",
+      "title": "Soul Selection — The Journey Concludes",
+      "soundcloud_url": "https://soundcloud.com/takuura/my-loves-afro-house-2024-mix-3-its-a-wrap"
+    }
+  ],
+  "dates": [
+    {
+      "date_line1": "27 Mar",
+      "date_line2": "2026",
+      "venue": "Mr Stork · Andaz Singapore",
+      "event": "Andaz Gin Launch Party · Level 39",
+      "highlight": "Headlined",
+      "time": "Past Event",
+      "past": true
+    },
+    {
+      "date_line1": "Regular",
+      "date_line2": "Booking",
+      "venue": "67 Pall Mall Singapore",
+      "event": "Members’ Club · Monthly Residency",
+      "time": "Evening Sets",
+      "note": "Members only"
+    }
+  ]
+}
