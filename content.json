@@ -1,6 +1,5 @@
 {
   "updated_at": "2026-07-06",
-  "latest_mix_url": "https://soundcloud.com/takuura/theradar005",
   "weekly_playlist_url": "https://soundcloud.com/takuura/sets/the-radar-takuera",
   "weekly_playlist_label": "THE RADAR · Weekly Radio",
   "music": [
@@ -13,6 +12,20 @@
       "label": "Mix · Afro House",
       "title": "Soul Selection — The Journey Concludes",
       "soundcloud_url": "https://soundcloud.com/takuura/my-loves-afro-house-2024-mix-3-its-a-wrap"
+    }
+  ],
+  "releases": [
+    {
+      "eyebrow": "Debut Single · Out Now",
+      "title": "Kumba",
+      "label_line": "Inner Moto · 2026",
+      "description": "A deep Afro House groove built from the sonic memory of Zimbabwe. Mbira-inflected melodies, driving soulful percussion, and a dancefloor made for open skies.",
+      "links": [
+        { "text": "SoundCloud", "url": "https://ditto.fm/kumba-takura" },
+        { "text": "Beatport", "url": "https://ditto.fm/kumba-takura" },
+        { "text": "Spotify", "url": "https://ditto.fm/kumba-takura" },
+        { "text": "Apple Music", "url": "https://ditto.fm/kumba-takura" }
+      ]
     }
   ],
   "dates": [

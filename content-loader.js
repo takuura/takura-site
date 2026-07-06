@@ -1,13 +1,16 @@
-/* TAKüRA content loader
-   Renders the Music mixes and Dates sections from /content.json.
+/* TAKüRA content loader v3
+   Renders THE RADAR rail, Latest Mixes, Releases, and Dates from /content.json.
    Fails safe by design: if content.json is missing, invalid, or fails
    validation, this script does nothing and the hardcoded HTML already
    in index.html remains visible. Malformed JSON never blanks the page.
    Schema notes: array order in content.json is canonical display order.
-   Required: updated_at (YYYY-MM-DD), latest_mix_url, weekly_playlist_url,
-   music[].title, music[].soundcloud_url, dates[].date_line1, dates[].venue,
-   dates[].event. Optional: label, date_line2, time, note, highlight, past,
-   link_url (https, renders the venue as a link). */
+   The curated THE RADAR playlist is the canonical latest-mix surface; its
+   top slot is owner-controlled via playlist order on SoundCloud.
+   Required: updated_at (YYYY-MM-DD), weekly_playlist_url, music[].title,
+   music[].soundcloud_url, releases[].title, dates[].date_line1,
+   dates[].venue, dates[].event. Optional: label, weekly_playlist_label,
+   date_line2, time, note, highlight, past, link_url (https), releases[]
+   eyebrow, label_line, description, links[] ({text, url https}). */
 (function () {
   'use strict';
 
@@ -47,6 +50,18 @@
       isTakuraScUrl(m.soundcloud_url));
   }
 
+  function validRelease(rel) {
+    if (!rel || typeof rel.title !== 'string' || rel.title.length === 0) { return false; }
+    if (rel.links !== undefined) {
+      if (!Array.isArray(rel.links)) { return false; }
+      for (var i = 0; i < rel.links.length; i++) {
+        var l = rel.links[i];
+        if (!l || typeof l.text !== 'string' || !l.text || !isHttpsUrl(l.url)) { return false; }
+      }
+    }
+    return true;
+  }
+
   function validGig(g) {
     if (!g || typeof g.venue !== 'string' || g.venue.length === 0 ||
       typeof g.event !== 'string' || g.event.length === 0 ||
@@ -65,46 +80,71 @@
       return r.json();
     })
     .then(function (c) {
-      if (!c || !Array.isArray(c.music) || !Array.isArray(c.dates)) {
+      if (!c || !Array.isArray(c.music) || !Array.isArray(c.dates) || !Array.isArray(c.releases)) {
         throw new Error('content.json has wrong shape');
       }
       if (typeof c.updated_at !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(c.updated_at)) {
         throw new Error('updated_at missing or not YYYY-MM-DD');
       }
-      if (!isTakuraScUrl(c.latest_mix_url)) {
-        throw new Error('latest_mix_url missing or not a soundcloud.com/takuura URL');
-      }
       if (!isTakuraScUrl(c.weekly_playlist_url)) {
         throw new Error('weekly_playlist_url missing or not a soundcloud.com/takuura URL');
       }
       var mixes = c.music.filter(validMix);
+      var releases = c.releases.filter(validRelease);
       var gigs = c.dates.filter(validGig);
-      if (c.music.length !== mixes.length || c.dates.length !== gigs.length) {
+      if (c.music.length !== mixes.length || c.dates.length !== gigs.length ||
+        c.releases.length !== releases.length) {
         throw new Error('validation failed: one or more items missing required fields');
       }
       if (gigs.length === 0) {
         throw new Error('no valid dates; keeping built-in content');
       }
 
-      /* MUSIC: rebuild the mixes grid. Array order is display order. */
+      /* THE RADAR: full-width curated playlist rail, newest episode on top. */
+      var radar = document.querySelector('#music .radar-rail');
+      if (radar) {
+        var radarLabel = c.weekly_playlist_label || 'THE RADAR · Weekly Radio';
+        radar.innerHTML = '<div class="mix-card reveal visible">' +
+          '<p class="mix-label">' + esc(radarLabel) + '</p>' +
+          scEmbed(c.weekly_playlist_url, 450, radarLabel) + '</div>';
+      }
+
+      /* LATEST MIXES: standalone mixes, array order is display order. */
       var grid = document.querySelector('#music .music-grid');
       if (grid) {
-        var html = '<div class="mix-card reveal visible">' +
-          '<p class="mix-label">Latest Mix · Afro House</p>' +
-          scEmbed(c.latest_mix_url, 166, 'Latest mix') + '</div>';
+        var html = '';
         mixes.forEach(function (m) {
           html += '<div class="mix-card reveal visible">' +
             '<p class="mix-label">' + esc(m.label || 'Mix · Afro House') + '</p>' +
             '<p class="mix-title">' + esc(m.title) + '</p>' +
             scEmbed(m.soundcloud_url, 80, m.title) + '</div>';
         });
-        html += '<div class="mix-card reveal visible">' +
-          '<p class="mix-label">' + esc(c.weekly_playlist_label || 'Weekly Mixes · Curated') + '</p>' +
-          scEmbed(c.weekly_playlist_url, 300, c.weekly_playlist_label || 'Weekly mixes playlist') + '</div>';
-        grid.innerHTML = html;
+        if (html) { grid.innerHTML = html; }
       }
 
-      /* DATES: rebuild the gig list. Array order is display order. */
+      /* RELEASES */
+      var relWrap = document.querySelector('#music .releases-wrap');
+      if (relWrap && releases.length > 0) {
+        var rh = '<p class="mix-label reveal visible">Releases</p>';
+        releases.forEach(function (rel) {
+          var links = '';
+          (rel.links || []).forEach(function (l) {
+            links += '<a href="' + esc(l.url) + '" target="_blank" rel="noopener" class="listen-btn">' + esc(l.text) + '</a>';
+          });
+          rh += '<div class="release-card reveal visible" style="margin-top:16px;">' +
+            '<div class="release-card-inner"><div>' +
+            (rel.eyebrow ? '<p class="single-eyebrow">' + esc(rel.eyebrow) + '</p>' : '') +
+            '<p class="release-title">' + esc(rel.title) + '</p>' +
+            (rel.label_line ? '<p class="release-label">' + esc(rel.label_line) + '</p>' : '') +
+            (rel.description ? '<p class="release-desc">' + esc(rel.description) + '</p>' : '') +
+            '</div>' +
+            (links ? '<div class="listen-links">' + links + '</div>' : '') +
+            '</div></div>';
+        });
+        relWrap.innerHTML = rh;
+      }
+
+      /* DATES: array order is display order. */
       var list = document.querySelector('#dates .gig-list');
       if (list) {
         var dh = '';
