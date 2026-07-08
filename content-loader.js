@@ -144,6 +144,22 @@
         relWrap.innerHTML = rh;
       }
 
+      /* EDITS & REWORKS: optional rail. Rendered only when a valid
+         owner-account playlist URL is present; otherwise the section is
+         silently omitted. Unofficial edits are takedown-prone, so this
+         field is optional by design and never blocks the rest of the page. */
+      var editsRail = document.querySelector('#music .edits-rail');
+      if (editsRail) {
+        if (isTakuraScUrl(c.edits_playlist_url)) {
+          var editsLabel = c.edits_label || 'Edits & Reworks';
+          editsRail.innerHTML = '<div class="mix-card reveal visible">' +
+            '<p class="mix-label">' + esc(editsLabel) + '</p>' +
+            scEmbed(c.edits_playlist_url, 300, editsLabel) + '</div>';
+        } else {
+          editsRail.innerHTML = '';
+        }
+      }
+
       /* DATES: array order is display order. */
       var list = document.querySelector('#dates .gig-list');
       if (list) {

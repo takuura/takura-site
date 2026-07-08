@@ -44,6 +44,9 @@ if (typeof c.updated_at !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(c.updated_at
 if (!isTakuraScUrl(c.weekly_playlist_url)) {
   fail('weekly_playlist_url is required and must be a full https://soundcloud.com/takuura/sets/... URL (no shortlinks, watch for the ghost profile)');
 }
+if (c.edits_playlist_url !== undefined && c.edits_playlist_url !== '' && !isTakuraScUrl(c.edits_playlist_url)) {
+  fail('edits_playlist_url is optional but must be a full https://soundcloud.com/takuura/sets/... URL when present');
+}
 if (!Array.isArray(c.music)) fail('music must be an array');
 if (!Array.isArray(c.releases)) fail('releases must be an array');
 if (!Array.isArray(c.dates)) fail('dates must be an array');
