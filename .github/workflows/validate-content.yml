@@ -1,0 +1,4 @@
+# Validates content.json on every push and PR that touches it
+name: Validate content.json
+on: {push: {paths: ["content.json"]}, pull_request: {paths: ["content.json"]}}
+jobs: {validate: {runs-on: ubuntu-latest, steps: [{uses: actions/checkout@v4}, {run: node validate-content.js}]}}

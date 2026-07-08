@@ -1,0 +1,90 @@
+{
+  "updated_at": "2026-07-08",
+  "weekly_playlist_url": "https://soundcloud.com/takuura/sets/the-radar-takuera",
+  "weekly_playlist_label": "THE RADAR · Weekly Radio",
+  "edits_playlist_url": "https://soundcloud.com/takuura/sets/edits-reworks-takuera",
+  "edits_label": "Edits & Reworks",
+  "music": [
+    {
+      "label": "Mix · Afro House",
+      "title": "Meridiem",
+      "soundcloud_url": "https://soundcloud.com/takuura/meridiem"
+    },
+    {
+      "label": "Mix · Afro House",
+      "title": "After Pall Mall",
+      "soundcloud_url": "https://soundcloud.com/takuura/after-pall-mall"
+    },
+    {
+      "label": "Mix · Afro House",
+      "title": "Liquid Liaisons (Road to 67)",
+      "soundcloud_url": "https://soundcloud.com/takuura/liquid-liaisons-road-to-67"
+    }
+  ],
+  "releases": [
+    {
+      "eyebrow": "New Single · Out Now",
+      "title": "Moto (Fire)",
+      "label_line": "Inner Moto · 2026",
+      "description": "Moto means fire in Shona, and it is the name behind the label itself, making this one the heart of the project. The third TAKüRA single: Afro House with Shona vocals, released 3 July 2026.",
+      "links": [
+        { "text": "SoundCloud", "url": "https://ditto.fm/moto-fire" },
+        { "text": "Beatport", "url": "https://ditto.fm/moto-fire" },
+        { "text": "Spotify", "url": "https://ditto.fm/moto-fire" },
+        { "text": "Apple Music", "url": "https://ditto.fm/moto-fire" }
+      ]
+    },
+    {
+      "eyebrow": "Second Single · Out Now",
+      "title": "Nditore",
+      "label_line": "Inner Moto · 2026",
+      "description": "Shona for “take me.” Deep, melodic Afro House about loneliness and longing in a city you don’t belong to. Mbira textures, sub bass, and vocal lines that switch between Shona and English.",
+      "links": [
+        { "text": "SoundCloud", "url": "https://ditto.fm/nditore" },
+        { "text": "Beatport", "url": "https://ditto.fm/nditore" },
+        { "text": "Spotify", "url": "https://ditto.fm/nditore" },
+        { "text": "Apple Music", "url": "https://ditto.fm/nditore" }
+      ]
+    },
+    {
+      "eyebrow": "Debut Single · Out Now",
+      "title": "Kumba",
+      "label_line": "Inner Moto · 2026",
+      "description": "A deep Afro House groove built from the sonic memory of Zimbabwe. Mbira-inflected melodies, driving soulful percussion, and a dancefloor made for open skies.",
+      "links": [
+        { "text": "SoundCloud", "url": "https://ditto.fm/kumba-takura" },
+        { "text": "Beatport", "url": "https://ditto.fm/kumba-takura" },
+        { "text": "Spotify", "url": "https://ditto.fm/kumba-takura" },
+        { "text": "Apple Music", "url": "https://ditto.fm/kumba-takura" }
+      ]
+    }
+  ],
+  "dates": [
+    {
+      "date_line1": "27 Mar",
+      "date_line2": "2026",
+      "venue": "Mr Stork · Andaz Singapore",
+      "event": "Andaz Gin Launch Party · Level 39",
+      "highlight": "Headlined",
+      "time": "Past Event",
+      "past": true
+    },
+    {
+      "date_line1": "20 Mar",
+      "date_line2": "2026",
+      "venue": "67 Pall Mall Singapore",
+      "event": "Members’ Club · Evening Set",
+      "note": "Recorded as After Pall Mall",
+      "time": "Past Event",
+      "past": true
+    },
+    {
+      "date_line1": "24 Jan",
+      "date_line2": "2026",
+      "venue": "67 Pall Mall Singapore",
+      "event": "Fi Woodfire Bar Takeover · DJ Set",
+      "time": "Past Event",
+      "past": true
+    }
+  ]
+}
