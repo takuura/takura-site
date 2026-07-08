@@ -5,18 +5,35 @@
   "music": [
     {
       "label": "Mix · Afro House",
-      "title": "[20 mins warm-up] The Radar 003",
-      "soundcloud_url": "https://soundcloud.com/takuura/20-mins-warm-up-the-radar-003"
+      "title": "Meridiem",
+      "soundcloud_url": "https://soundcloud.com/takuura/meridiem"
     },
     {
-      "label": "Mix · Multi-Genre b2b",
-      "title": "Kitchen Sesh 001 // TAKüRA b2b DJ Synth",
-      "soundcloud_url": "https://soundcloud.com/takuura/kitchen-sesh001"
+      "label": "Mix · Afro House",
+      "title": "After Pall Mall",
+      "soundcloud_url": "https://soundcloud.com/takuura/after-pall-mall"
+    },
+    {
+      "label": "Mix · Afro House",
+      "title": "Liquid Liaisons (Road to 67)",
+      "soundcloud_url": "https://soundcloud.com/takuura/liquid-liaisons-road-to-67"
     }
   ],
   "releases": [
     {
       "eyebrow": "New Single · Out Now",
+      "title": "Moto (Fire)",
+      "label_line": "Inner Moto · 2026",
+      "description": "Moto means fire in Shona, and it is the name behind the label itself, making this one the heart of the project. The third TAKüRA single: Afro House with Shona vocals, released 3 July 2026.",
+      "links": [
+        { "text": "SoundCloud", "url": "https://ditto.fm/moto-fire" },
+        { "text": "Beatport", "url": "https://ditto.fm/moto-fire" },
+        { "text": "Spotify", "url": "https://ditto.fm/moto-fire" },
+        { "text": "Apple Music", "url": "https://ditto.fm/moto-fire" }
+      ]
+    },
+    {
+      "eyebrow": "Second Single · Out Now",
       "title": "Nditore",
       "label_line": "Inner Moto · 2026",
       "description": "Shona for “take me.” Deep, melodic Afro House about loneliness and longing in a city you don’t belong to. Mbira textures, sub bass, and vocal lines that switch between Shona and English.",
@@ -51,7 +68,7 @@
       "past": true
     },
     {
-      "date_line1": "21 Mar",
+      "date_line1": "20 Mar",
       "date_line2": "2026",
       "venue": "67 Pall Mall Singapore",
       "event": "Members’ Club · Evening Set",
@@ -63,7 +80,7 @@
       "date_line1": "24 Jan",
       "date_line2": "2026",
       "venue": "67 Pall Mall Singapore",
-      "event": "Members’ Club · Evening Set",
+      "event": "Fi Woodfire Bar Takeover · DJ Set",
       "time": "Past Event",
       "past": true
     }
