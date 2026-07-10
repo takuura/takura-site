@@ -1,0 +1,14 @@
+# Asserts content.json, the fallback HTML, and the meta description
+# agree on the latest release title (releases[0] is canonical).
+name: Check content drift
+on:
+  push:
+    paths: ["content.json", "index.html", "check-drift.js"]
+  pull_request:
+    paths: ["content.json", "index.html", "check-drift.js"]
+jobs:
+  check-drift:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: node check-drift.js

@@ -1,0 +1,16 @@
+# Liveness check for every external URL in content.json and _redirects.
+# Runs on every push that touches them, and weekly so link rot is caught
+# even when the repo is quiet.
+name: Check external links
+on:
+  push:
+    paths: ["content.json", "_redirects", "check-links.js"]
+  schedule:
+    - cron: "0 6 * * 1" # Mondays 06:00 UTC
+  workflow_dispatch:
+jobs:
+  check-links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: node check-links.js
