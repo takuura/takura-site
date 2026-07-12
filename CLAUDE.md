@@ -6,7 +6,7 @@ TAKüRA's public DJ site (takura.live). Static single-file site, no build step.
 - `index.html` is self-contained (inline CSS/JS/base64 images) and holds the
   FALLBACK content. `content-loader.js` hydrates music/releases/dates from
   `content.json` at runtime; if content.json is missing or invalid the
-  hardcoded HTML stays visible. Never let the two drift apart.
+  hardcoded HTML stays visible. Never let the two drift far apart.
 - `content.json` is the editing surface for mixes, releases, and dates.
   Array order = display order. `updated_at` must be YYYY-MM-DD.
 - All SoundCloud URLs must be full `https://soundcloud.com/takuura/...`
@@ -17,16 +17,18 @@ TAKüRA's public DJ site (takura.live). Static single-file site, no build step.
 
 ## Deploy
 - Netlify project "takura", production = main branch, deploys to
-  https://takura.live automatically on merge. `_headers` keeps
-  content.json on a 60s cache. `_redirects` holds short URLs used on
-  printed and social media: never delete old redirect slugs.
+  https://takura.live. Merging to main deploys automatically.
+  `_headers` keeps content.json on a 60s cache; `_redirects` holds
+  short URLs used on printed/social media, do not delete old
+  redirect slugs.
 
 ## Editing rules
 - Content updates (new mix, gig, release) belong in content.json, not
   index.html. When a release supersedes the "latest", also update the
   meta description and About copy in index.html (they are hardcoded).
-- Brand: TAKüRA (with umlaut), label Inner Moto, contact
-  bookings@takura.live. No em dashes in site copy.
+- Brand: TAKüRA (u-umlaut), label Inner Moto, contact
+  bookings@takura.live. Credential: WSET Level 2 Award in Wines,
+  never write Level 3. No em dashes in new site copy.
 - Never commit secrets or .env files; this repo is public.
 - Keep changes small and human-reviewable; this site is a brand asset
   for the 2028 residency goal.
