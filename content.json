@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-10",
+  "updated_at": "2026-07-08",
   "weekly_playlist_url": "https://soundcloud.com/takuura/sets/the-radar-takuera",
   "weekly_playlist_label": "THE RADAR · Weekly Radio",
   "edits_playlist_url": "https://soundcloud.com/takuura/sets/edits-reworks-takuera",
@@ -28,7 +28,10 @@
       "label_line": "Inner Moto · 2026",
       "description": "Moto means fire in Shona, and it is the name behind the label itself, making this one the heart of the project. The third TAKüRA single: Afro House with Shona vocals, released 3 July 2026.",
       "links": [
-        { "text": "Listen", "url": "https://ditto.fm/moto-fire" }
+        {
+          "text": "Listen on all platforms",
+          "url": "https://ditto.fm/moto-fire"
+        }
       ]
     },
     {
@@ -37,7 +40,10 @@
       "label_line": "Inner Moto · 2026",
       "description": "Shona for “take me.” Deep, melodic Afro House about loneliness and longing in a city you don’t belong to. Mbira textures, sub bass, and vocal lines that switch between Shona and English.",
       "links": [
-        { "text": "Listen", "url": "https://ditto.fm/nditore" }
+        {
+          "text": "Listen on all platforms",
+          "url": "https://ditto.fm/nditore"
+        }
       ]
     },
     {
@@ -46,7 +52,10 @@
       "label_line": "Inner Moto · 2026",
       "description": "A deep Afro House groove built from the sonic memory of Zimbabwe. Mbira-inflected melodies, driving soulful percussion, and a dancefloor made for open skies.",
       "links": [
-        { "text": "Listen", "url": "https://ditto.fm/kumba-takura" }
+        {
+          "text": "Listen on all platforms",
+          "url": "https://ditto.fm/kumba-takura"
+        }
       ]
     }
   ],
