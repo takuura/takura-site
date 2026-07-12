@@ -28,7 +28,7 @@ TAKüRA's public DJ site (takura.live). Static single-file site, no build step.
   meta description and About copy in index.html (they are hardcoded).
 - Brand: TAKüRA (u-umlaut), label Inner Moto, contact
   bookings@takura.live. Credential: WSET Level 2 Award in Wines,
-  never write Level 3.
+  never write Level 3. No em dashes in new site copy.
 - Never commit secrets or .env files; this repo is public.
 - Keep changes small and human-reviewable; this site is a brand asset
   for the 2028 residency goal.
