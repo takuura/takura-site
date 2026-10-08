@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-28",
+  "updated_at": "2026-10-08",
   "weekly_playlist_url": "https://soundcloud.com/takuura/sets/the-radar-takura",
   "weekly_playlist_label": "THE RADAR · Weekly Radio",
   "edits_playlist_url": "https://soundcloud.com/takuura/sets/edits-reworks-takuera",
@@ -23,7 +23,19 @@
   ],
   "releases": [
     {
-      "eyebrow": "New Single · Out Now",
+      "eyebrow": "New Single · Pre-save Now",
+      "title": "Dzoka",
+      "label_line": "Inner Moto · 2026",
+      "description": "Dzoka means “come back” in Shona. Peak-time Afro House at 123 BPM: a soulful female vocal calls “Dzoka, dzoka kwandiri” (come back to me) over a hypnotic four-bar motif, rolling congas and deep sub, with crowd chants built for sunrise sets. The fourth TAKüRA single, out 23 October 2026.",
+      "links": [
+        {
+          "text": "Pre-save Dzoka",
+          "url": "https://ditto.fm/dzoka-takura"
+        }
+      ]
+    },
+    {
+      "eyebrow": "Third Single · Out Now",
       "title": "Moto (Fire)",
       "label_line": "Inner Moto · 2026",
       "description": "Moto means fire in Shona, and it is the name behind the label itself, making this one the heart of the project. The third TAKüRA single: Afro House with Shona vocals, released 3 July 2026.",
