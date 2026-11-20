@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-23",
+  "updated_at": "2026-11-20",
   "weekly_playlist_url": "https://soundcloud.com/takuura/sets/the-radar-takura",
   "weekly_playlist_label": "THE RADAR · Weekly Radio",
   "edits_playlist_url": "https://soundcloud.com/takuura/sets/edits-reworks-takuera",
@@ -23,7 +23,27 @@
   ],
   "releases": [
     {
-      "eyebrow": "New Single · Out Now",
+      "eyebrow": "New Remix · Out Now",
+      "title": "Reel Men in Cape Town (Remix)",
+      "label_line": "TAKüRA & ZÜVA · Inner Moto · 2026",
+      "description": "The TAKüRA Remix of the ZÜVA original. It began with one line a friend sang on a fishing trip in South Africa. Now it is Afro House at 122 BPM: a female lead sings the “We’re the reel men in Cape Town” hook over a “Cape Town” call and response. Released 20 November 2026.",
+      "links": [
+        {
+          "text": "Spotify",
+          "url": "https://open.spotify.com/track/1jhL19xXJbUWkWlbDD9dmf"
+        },
+        {
+          "text": "YouTube Music",
+          "url": "https://music.youtube.com/playlist?list=OLAK5uy_lofnM7nuxJ23AmcJJmwMk8nbb1fIuk9RI"
+        },
+        {
+          "text": "SoundCloud",
+          "url": "https://soundcloud.com/takuura/reel-men-in-cape-town-remix"
+        }
+      ]
+    },
+    {
+      "eyebrow": "Fourth Single · Out Now",
       "title": "Dzoka",
       "label_line": "Inner Moto · 2026",
       "description": "Dzoka means “come back” in Shona. Peak-time Afro House at 123 BPM: a soulful female vocal calls “Dzoka, dzoka kwandiri” (come back to me) over a hypnotic four-bar motif, rolling congas and deep sub, with crowd chants built for sunrise sets. The fourth TAKüRA single, released 23 October 2026.",
